@@ -1,17 +1,8 @@
-import { fromEvent } from 'rxjs';
-import { map } from 'rxjs/operators';
-import './style.css';
-import Icon from './Screenshot_1.png';
+import printMe from './print';
 
-const btn = document.getElementById('btn')
+const btn = document.getElementById('btn');
+btn.onclick = printMe;
 
-const element = document.createElement('div');
+document.getElementById('myDiv').innerHTML = 'hello';
 
-const myIcon = new Image();
-myIcon.src = Icon;
-document.getElementById('myDiv').appendChild(myIcon);
-// const source = fromEvent(btn, 'click');
-// const example = source.pipe(map(e => ('Time now: ' = e.timeStamp)));
-// const subscribe = example.subscribe(val => console.log(val));
- 
 console.log('all oks')
